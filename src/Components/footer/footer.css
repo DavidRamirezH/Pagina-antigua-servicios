@@ -1,0 +1,61 @@
+footer{
+    color: var(--texto);
+    padding: 10px 10px 20px;
+}
+
+footer p{
+    font-size: 14px;
+}
+
+.icons-footer img{
+    width: 40px;
+    margin: 5px;
+}
+
+.links-footer p{
+    margin: 15px 0;
+}
+
+.suscripcion-footer div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.suscripcion-footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.suscripcion-footer div input{
+    width: 80%;
+    padding: 5px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--texto);
+    color: var(--texto);
+    outline: none;
+}
+.suscripcion-footer div img{
+    max-width: 20%;
+    min-width: 50px;
+}
+.suscripcion-footer .btn-empieza{
+    background: var(--segundo);
+    border: none;
+    color: var(--texto);
+}
+
+@media (min-width:450px) {
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+    }
+    footer > div{
+        margin: 20px;
+        width: 300px;
+    }
+}

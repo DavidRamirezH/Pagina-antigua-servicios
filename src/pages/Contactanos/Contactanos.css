@@ -1,0 +1,71 @@
+
+.contactar div{
+    text-align: center;
+    padding: 10px;
+}
+.contactar img{
+    width: 100px;
+}
+.contactar a{
+    color: var(--texto);
+    padding: 10px;
+    display: block;
+}
+.cont-form{
+    text-align: center;
+}
+.cont-form h2{
+    font-size: 32px;
+    margin: 20px 0;
+}
+.cont-form div{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 20px;
+    gap: 1;
+}
+.cont-form input{
+    color: var(--texto);
+    width: 45%;
+    padding: 5px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(184, 184, 184);
+    font-weight: 600;
+    font-size: 16px;
+}
+.cont-form textarea{
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--texto);
+    resize: none;
+    width: 100%;
+    padding: 5px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid  rgb(184, 184, 184);
+}
+.cont-form{
+    padding: 10px;
+}
+
+@media (min-width:900px) {
+    .contactar{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 20px;
+        width: 80%;
+        margin: auto;
+    }
+    .contactar div{
+        width: 300px;
+    }
+    .cont-form{
+        width: 80%;
+        margin: auto;
+    }
+}

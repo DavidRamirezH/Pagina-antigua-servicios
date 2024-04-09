@@ -1,0 +1,146 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+    background: var(--principal);
+}
+
+.btn-menu{
+    width: 40px;
+    cursor: pointer;
+    margin: 5px;
+}
+.logo-web{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: var(--texto);
+    text-decoration: none;
+}
+.logo-web img{
+    width: 40px;
+    margin: 0 10px 0;
+    height: 40px;
+    object-fit: cover;
+}
+.ocultar{
+    bottom: 100%;
+    position: absolute;
+}
+.menu .activo{
+    background: var(--tercero);
+}
+.menu{
+    position: absolute;
+    top: 80px;
+    background: var(--principal);
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: .2s;
+    left: 0;
+}
+.menu a{
+    color: var(--texto);
+    text-decoration: none;
+    padding: 10px 5px;
+    margin: 5px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.menu a:hover{
+    background: var(--tercero);
+}
+
+@media (min-width: 900px ) {
+    .ocultar{
+        position: relative;
+        display: flex;
+        align-items: center;
+        bottom: 0;
+    }
+    .ocultar .activo{
+        color: var(--tercero);
+        background: none;
+    }
+    .ocultar a{
+        color: var(--texto);
+        text-decoration: none;
+        padding: 10px 5px;
+        margin: 5px 10px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .btn-menu{
+        display: none;
+    }
+
+
+    .menu .activo{
+        background: none;
+        color: var(--tercero);
+    }
+    .menu{
+        position: relative;
+        top: 0;
+        right: 0;
+        background: none;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: auto;
+    }
+    .menu a{
+        color: var(--texto);
+        text-decoration: none;
+        padding: 10px 5px;
+        margin: 5px 10px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .menu a:hover{
+        background: none;
+    }
+    .ocultar a:hover{
+        background: none;
+    }
+}
+
+
+.btn-contactos{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    bottom: 10px;
+    right: 2vw;
+    background: var(--texto);
+    border-radius: 10px;
+    margin: 5px;
+    border: 2px solid #02742c;
+    animation: btn .5s infinite linear alternate;
+}
+.btn-contactos img{
+    width: 70px;
+}
+.btn-contactos h2{
+    padding: 2px;
+    margin: 2px;
+}
+.btn-whatsapp{
+    width: 70px;
+}
+@keyframes btn {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}

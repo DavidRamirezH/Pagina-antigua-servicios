@@ -1,0 +1,652 @@
+.cont-inicio{
+    padding: 80px 5px 20px;
+}
+/* imagen principal */
+.contenedor-img-principal{
+    position: relative;
+}
+.banner-bg{
+    width: 100%;
+    z-index: 1;
+}
+.chica{
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    z-index: 2;
+    width: 25vw;
+    animation: chica 1s infinite alternate;
+}
+@keyframes chica {
+    0%{
+        transform: translateY(4px);
+    }
+}
+.chico{
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    width: 25vw;
+    animation: chico 1s infinite alternate;
+}
+@keyframes chico {
+    0%{
+        transform: translate(3px);
+    }
+}
+.chico-top{
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    width: 20vw;
+    animation: chico-top 1s infinite alternate linear;
+}
+@keyframes chico-top {
+    0%{
+        transform: translateY(2px);
+    }
+}
+/* titulo */
+.titulo{
+    font-size: 28px;
+    color: var(--texto);
+    text-align: center;
+}
+.titulo span{
+    color: var(--tercero);
+}
+.texto-slogan{
+    color: var(--texto);
+    display: none;
+}
+.btn-empieza{
+    background: var(--tercero);
+    color: var(--principal);
+    text-decoration: none;
+    padding: 15px 25px;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+    width: 200px;
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+}
+.aparecer {
+    animation: aparecer-desde-abajo 0.5s ease-in-out forwards;
+    opacity: 0; /* Asegúrate de que el elemento esté inicialmente invisible */
+}
+@keyframes aparecer-desde-abajo {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* tecnicas */
+.titulo-tecnicas{
+    display: none;
+}
+.cont-tecnicas{
+    color: var(--texto);
+    padding: 5px;
+}
+
+/* tarjetas */
+.tarjeta{
+    padding: 5px;
+}
+.tarjeta h2{
+    margin: 20px 0;
+    text-align: center;
+}
+.tarjeta p{
+    font-weight: 300;
+}
+.tarjeta div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 20px; 
+}
+.tarjeta a{
+    width: 150px;
+    height: max-content;
+    margin: auto;
+}
+.tarjeta img{
+    width: 100px;
+}
+.t-uno{
+    border-right: 2px solid var(--texto) ;
+    border-bottom: 1px solid var(--texto);
+}
+.t-dos{
+    border-left: 2px solid var(--texto) ;
+    border-bottom: 1px solid var(--texto);
+}
+.t-tres{
+    border-right: 2px solid var(--texto) ;
+    border-bottom: 1px solid var(--texto);
+}
+.t-cuatro{
+    border-left: 2px solid var(--texto) ;
+}
+/* elegirnos */
+.cont-elegirnos{
+    background: var(--texto);
+    padding: 20px 0;
+    overflow: hidden;
+}
+.cont-elegirnos h2{
+    text-align: center;
+}
+.junta{
+    width: 100%;
+}
+/* acordeon */
+.contenedor-desplegable {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.item {
+    background-color: var(--gris);
+    border: 1px solid #ececec;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden; /* Oculta el contenido que desborda */
+    transition: max-height 1s ease; /* Aplica la transición a la altura máxima */
+    max-height: 100%; /* Altura máxima inicial */
+}
+
+.item:hover {
+    background-color: #f8f8f8;
+}
+
+.item h2 {
+    margin: 0;
+    text-align: start;
+    font-size: 20px;
+}
+.item p{
+    margin: 15px 0;
+}
+
+.item.abierto {
+    max-height: 100%; /* Altura máxima cuando está abierto */
+}
+.flecha {
+    width: 30px; /* Ajusta según sea necesario */
+    height: auto; /* Ajusta según sea necesario */
+    transition: transform 0.3s ease; /* Animación de la rotación */
+}
+
+.rotada {
+    transform: rotate(180deg); /* Rota la flecha 180 grados */
+}
+.item div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* anuncio */
+.contenedor-anuncio {
+   background: var(--principal);
+   overflow: hidden;
+   position: relative;
+   height: 50px;
+   margin: 80px 0;
+   display: flex;
+   align-items: center;
+   transform: rotate(-5deg);
+}
+.contenedor-anuncio > div{
+    position: absolute;
+    display: flex;
+    animation: moverAnuncio 15s linear infinite; 
+    color: var(--tercero);
+    font-weight: 700;
+    font-size: 20px;
+}
+.item-anuncio {
+    padding: 10px;
+    margin-right: 10px; /* Espacio entre los elementos */
+    text-align: center;
+    white-space: nowrap; /* Evita que el texto se rompa en líneas */
+
+   
+}
+
+.item-anuncio:first-child {
+    margin-left: 0px; /* Espacio en el primer elemento */
+}
+
+@keyframes moverAnuncio {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* pasos */
+.pasos{
+    padding: 10px;
+}
+.pasos-img{
+    background: var(--gris);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    margin: 20px auto;
+}
+.pasos-img img{
+    width: 40px;
+    transform: rotate(-45deg);
+}
+.pasos h3{
+    text-align: center;
+    margin: 40px 0 10px;
+}
+.pasos-p{
+    background: var(--principal);
+    color: var(--tercero);
+    padding: 10px;
+    font-size: 20px;
+    width: max-content;
+    margin: 20px auto 50px;
+    border-radius: 5px;
+}
+
+/* precios */
+.precios{
+    color: var(--texto);
+}
+.precios > h2{
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+.planes{
+    padding: 10px;
+}
+
+.tarjeta-plan{
+    padding: 15px;
+    margin: 10px 0;
+    background: var(--principal-claro);
+    position: relative;
+}
+.tipo-plan{
+    color: var(--tercero);
+    font-weight: 600;
+}
+.precio{
+    text-align: start;
+    font-size: 38px;
+}
+.oferta{
+    display: flex;
+    margin: 10px 0;
+    align-items: end;
+}
+.oferta p{
+    text-decoration: line-through;
+    color: var(--oferta);
+    font-size: 20px;
+}
+.oferta-etiqueta{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    rotate: 45deg;
+    background: var(--oferta);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tarjeta-plan .btn-empieza{
+    background: var(--segundo);
+    color: var(--texto);
+    margin: 10px 0;
+}
+.tarjeta-plan h3{
+    margin: 10px 0;
+    font-size: 28px;
+}
+.tarjeta-plan > p{
+    margin: 10px 0;
+}
+
+.descuentos{
+    background: var(--banner-publicidad);
+    color: var(--texto);
+    margin: 20px 0;
+    padding: 10px;
+}
+.descuentos a{
+    color: var(--principal);
+    text-decoration: none;
+    background: var(--gris);
+    padding: 15px 30px;
+    display: block;
+    width: max-content;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.texto-descuentos{
+    padding: 10px;
+}
+.texto-descuentos h2{
+    font-size: 38px;
+}
+.texto-descuentos span{
+    color: var(--oferta);
+}
+
+.experiencias-banner{
+    padding-bottom: 20px;
+    display: none;
+}
+
+.experiencias-banner div{
+    text-align: center;
+}
+.experiencias-banner img{
+    width: 50px;
+    margin-top: 50px;
+}
+
+
+.h2-espaciado{
+    font-size: 36px;
+}
+.pasos h3{
+    font-size: 26px;
+}
+
+@media (min-width:500px) {
+    .contenedor-img-principal{
+        display: flex;
+        align-items: center;
+    }
+    .banner-bg{
+        margin: auto;
+        width: 400px;
+        z-index: 1;
+    }
+    .chico{
+        width: 100px;
+        z-index: 2;
+    }
+    .chico-top{
+        width: 100px;
+        z-index: 2;
+        right: 10vh;
+    }
+
+    .tarjeta img{
+        width: 150px;
+    }
+
+    .junta{
+        width: 300px;
+        margin: auto;
+    }
+    .item{
+        width: 400px;
+    }
+
+    .cont-elegirnos > section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pasos{
+        flex-direction: row;
+    }
+}
+@media (min-width:700px) {
+    .chico{
+        width: 100px;
+        z-index: 2;
+        right: 10vw;
+    }
+    .chico-top{
+        width: 100px;
+        z-index: 2;
+        right: 20vw;
+    }
+    .chica{
+        width: 150px;
+        left: 5vw;
+        top: 50px;
+    }
+    .pasos > div{
+        width: 250px;
+        margin: 20px 20px;
+    }
+
+}
+@media (min-width:900px) {
+    .cont-inicio{
+        display: flex;
+        align-items: center;
+        height: 60vh;
+    }
+    .cont-inicio section{
+        width: 100%;
+    }
+    .chico{
+        width: 12vw;
+        z-index: 2;
+        right: 0;
+    }
+    .chico-top{
+        width: 10vw;
+        z-index: 2;
+        right: 10vw;
+    }
+    .chica{
+        width: 15vw;
+        left: 0;
+        top: 0px;
+    }
+    .banner-bg{
+        width: 80%;
+    }
+    .planes{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .planes > div{
+        width: 300px;
+    }
+    .experiencias-banner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .descuentos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cont-tarjetas{
+        display: flex;
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 0px; /* Espacio entre las celdas */
+        width: 80%;
+        margin: auto;
+    }
+    .cont-tecnicas{
+        padding: 40px;
+    }
+    .t-dos{
+        border: none
+    }
+    .t-tres{
+        border: none
+    }
+    .t-cuatro{
+        border-top: 1px solid var(--texto); 
+    }
+    .junta{
+        width: 450px;
+    }
+
+    .titulo{
+        font-size: 38px;
+        text-align: start;
+    }
+    .btn-empieza{
+        margin: 15px 0;
+    }
+    .texto-slogan{
+        margin: 10px 0;
+        display: block;
+    }
+
+    .titulo-tecnicas{
+        display: block;
+        font-size: 32px;
+        margin: 30px 0 60px;
+        text-align: center;
+    }
+
+    .cont-elegirnos > h2{
+        font-size: 32px;        
+    }
+
+    .precios h2{
+        font-size: 32px;
+        margin: 30px 0px;
+        
+    }
+    .tarjeta-plan{
+        margin: 10px;
+    }
+
+}
+@media (min-width: 1200px) {
+
+    .cont-elegirnos{
+        padding: 4% 10%;
+        margin: auto;
+    }
+    .contenedor-anuncio{
+        width: 100%;
+        left: 0;
+        position: absolute;
+    }
+    .h2-espaciado{
+        margin-top: 200px;
+    }
+    .planes{
+        width: 80%;
+        margin: auto;
+    }
+    .titulo{
+        font-size: 48px;
+    }
+    .cont-inicio{
+        height: 85vh;
+    }
+    .cont-tarjetas h2{
+        text-align: start;
+    }
+    .descuentos{
+        padding: 40px;
+    }
+
+    .contenedor-anuncio > div{
+        animation: moverAnuncio 20s linear infinite;
+    }
+    @keyframes moverAnuncio {
+        0% {
+            transform: translateX(100vw);
+        }
+        100% {
+            transform: translateX(-100vw);
+        }
+    }    
+    .item-anuncio p{
+        font-weight: 700;
+    }
+
+    .cont-abs{
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    .contenedor-desplegable{
+        max-width: 100%;
+    }
+    .item{
+        width: 100%;
+    }
+    .item div{
+        justify-content: space-between;
+    }
+    .planes > div{
+        width: 30%;
+    }
+}
+.reparacion{
+    position: fixed ;
+    z-index: 99;
+    display: none;
+    bottom: 0;
+}
+.mostrar-reparacion{
+    position: fixed;
+    z-index: 99;
+    top: 80px;
+    background: var(--tercero);
+    color: var(--principal);
+    padding: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    right: 0;
+    opacity: 1;
+    animation: alerta 1s ease;
+}
+.mostrar-reparacion img{
+    width: 50px;
+}
+.mostrar-reparacion p{
+    width: calc(100% - 50px);
+}
+@keyframes alerta {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --principal:#00172F;
+  --principal-claro:#011D3A;
+  --segundo:#3657CD;
+  --tercero: #FFD02C;
+  --texto: white;
+  --banner-publicidad:#031888;
+  --gris: #f3f3f3;
+  --oferta:#FB788E;
+
+}
+
+body{
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  background: var(--principal);
+}
+@media (min-width:1200px) {
+    p{
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+}
